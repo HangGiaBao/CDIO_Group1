@@ -1,12 +1,13 @@
 const mongoose = require("mongoose");
 
+const GiaoVienSchema = new mongoose.Schema({
+    full_name: { type: String, required: true }, // Tên đầy đủ
+    subject: { type: String, required: true }, // Môn học giảng dạy
+    phone: { type: String, required: true, unique: true }, // Số điện thoại
+    email: { type: String, required: true, unique: true }, // Email
+    photo: { type: String }, // Ảnh giáo viên
+}, { timestamps: true }); 
 
-const giaovien = sequelize.define("giaovien", {
-    full_name: { type: DataTypes.STRING, allowNull: false },
-    subject: { type: DataTypes.STRING, allowNull: false },
-    phone: { type: DataTypes.STRING, allowNull: false, unique: true },
-    email: { type: DataTypes.STRING, allowNull: false, unique: true },
-    photo: { type: DataTypes.STRING },
-}, { timestamps: true });
+const GiaoVien = mongoose.model("GiaoVien", GiaoVienSchema);
 
-module.exports = giaovien;
+module.exports = GiaoVien;

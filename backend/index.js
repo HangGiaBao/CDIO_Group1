@@ -7,6 +7,7 @@ const cookieParser = require("cookie-parser");
 const authRoute = require("./routes/auth");
 const userRoute = require("./routes/user");
 const thongBaoRoute = require("./routes/thongbao");
+const giaoVienRoute = require("./routes/giaovien");
 
 const app = express();
 
@@ -41,6 +42,7 @@ const connectDB = async () => {
 app.use("/v1/auth", authRoute);
 app.use("/v1/user", userRoute);
 app.use("/v1/thongbao", thongBaoRoute);
+app.use("/v1/giaovien", giaoVienRoute);
 
 // ✅ Route kiểm tra server hoạt động
 app.get("/", (req, res) => {

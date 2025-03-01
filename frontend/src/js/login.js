@@ -1,41 +1,36 @@
-$(document).ready(function () {
-    $("#form-login").submit(function (event) {
-        event.preventDefault(); // Ngăn form tải lại trang
-
-        var username = $("#username").val().trim();
-        var password = $("#password").val().trim();
-
-        // Kiểm tra hợp lệ
-        if (username === "" || password === "") {
-            $("#error-message").text("Vui lòng nhập đầy đủ thông tin!");
-            return;
+$(document).ready(function() {
+    $('#eye').on('click', function() {
+        let passwordField = $('#password');
+        let passwordFieldType = passwordField.attr('type');
+        if (passwordFieldType === 'password') {
+            passwordField.attr('type', 'text');
+            $(this).find('i').removeClass('far fa-eye').addClass('far fa-eye-slash');
+        } else {
+            passwordField.attr('type', 'password');
+            $(this).find('i').removeClass('far fa-eye-slash').addClass('far fa-eye');
         }
-
-        // Gửi yêu cầu đăng nhập bằng AJAX
-        $.ajax({
-            url: "http://localhost:5001/v1/auth/login", // ✅ Sửa lại đường dẫn API
-            type: "POST",
-            contentType: "application/json",
-            data: JSON.stringify({ username: username, password: password }),
-            dataType: "json",
-            success: function (response) {
-                if (response.accessToken) {
-                    // ✅ Lưu token vào localStorage (hoặc cookie nếu cần)
-                    localStorage.setItem("accessToken", response.accessToken);
-
-                    // ✅ Chuyển hướng sang home.html
-                    window.location.href = "/my-app/src/Pages/home.html";
-                } else {
-                    $("#error-message").text(response.message || "Đăng nhập thất bại!");
-                }
-            },
-            error: function (xhr) {
-                if (xhr.responseJSON && xhr.responseJSON.message) {
-                    $("#error-message").text(xhr.responseJSON.message);
-                } else {
-                    $("#error-message").text("Lỗi kết nối máy chủ! Vui lòng thử lại.");
-                }
-            }
-        });
     });
 });
+
+function handleLogin(event) {
+    event.preventDefault();
+    const username = $('#username').val();
+    const password = $('#password').val();
+    const errorMessage = $('#error-message');
+
+    if (username === '' || password === '') {
+        errorMessage.text('Tên đăng nhập và mật khẩu không được để trống.');
+        return false;
+    }
+
+    // Example of a simple login validation
+    if (username === 'admin' && password === 'admin') {
+        alert('Đăng nhập thành công!');
+        // Redirect to another page or perform other actions
+        window.location.href = '/frontend/src/Pages/home.html';
+    } else {
+        errorMessage.text('Tên đăng nhập hoặc mật khẩu không đúng.');
+    }
+
+    return false;
+}
