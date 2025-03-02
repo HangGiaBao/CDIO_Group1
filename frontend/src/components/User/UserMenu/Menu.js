@@ -22,8 +22,8 @@ const Menu = () => {
         </div>
         {openMenu === "gioithieu" && (
           <>
-            <div className="subItem" onClick={() => navigate("/user/gioithieu1")}>Giới thiệu trường</div>
-            <div className="subItem" onClick={() => navigate("/user/gioithieu2")}>Giới thiệu đội ngũ giáo viên</div>
+            <div className="subItem" onClick={() => navigate("/user/GioiThieuTruong")}>Giới thiệu trường</div>
+            <div className="subItem" onClick={() => navigate("/user/GioiThieuDoiNguGiaoVien")}>Giới thiệu đội ngũ giáo viên</div>
           </>
         )}
 
@@ -34,8 +34,8 @@ const Menu = () => {
         </div>
         {openMenu === "thongbao" && (
           <>
-            <div className="subItem">Sự kiện</div>
-            <div className="subItem">Hoạt động của bé</div>
+            <div className="subItem" onClick={() => navigate("/user/SuKien")}>Sự kiện</div>
+            <div className="subItem" onClick={() => navigate("/user/HoatDongCuaBe")}>Hoạt động của bé</div>
           </>
         )}
 
@@ -46,8 +46,8 @@ const Menu = () => {
         </div>
         {openMenu === "thongtinchung" && (
           <>
-            <div className="subItem">Thông tin của bé</div>
-            <div className="subItem">Thông tin giáo viên chủ nhiệm</div>
+            <div className="subItem " onClick={() => navigate("/user/ThongTinCuaBe")}>Thông tin của bé</div>
+            <div className="subItem"onClick={() => navigate("/user/ThongTinGiaoVienChuNhiem")}>Thông tin giáo viên chủ nhiệm</div>
           </>
         )}
 
@@ -58,8 +58,8 @@ const Menu = () => {
         </div>
         {openMenu === "lichhoc" && (
           <>
-            <div className="subItem">Thời khóa biểu</div>
-            <div className="subItem">Thực đơn</div>
+            <div className="subItem" onClick={() => navigate("/user/ThoiKhoaBieu")}>Thời khóa biểu</div>
+            <div className="subItem" onClick={() => navigate("/user/ThucDon")}>Thực đơn</div>
           </>
         )}
 
@@ -70,8 +70,8 @@ const Menu = () => {
         </div>
         {openMenu === "khoanhkhac" && (
           <>
-            <div className="subItem">Học tập</div>
-            <div className="subItem">Vui chơi</div>
+            <div className="subItem" onClick={() => navigate("/user/HocTap")}>Học tập</div>
+            <div className="subItem" onClick={() => navigate("/user/VuiChoi")}>Vui chơi</div>
           </>
         )}
 
@@ -82,7 +82,7 @@ const Menu = () => {
         </div>
         {openMenu === "hocphi" && (
           <>
-            <div className="subItem">Học phí</div>
+            <div className="subItem" onClick={() => navigate("/user/HocPhi")}>Học phí</div>
           </>
         )}
       </div>

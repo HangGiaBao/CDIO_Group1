@@ -1,10 +1,10 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const GioiThieu= () =>{
+const GioiThieuTruong= () =>{
     const navigate = useNavigate();
     const handleClickNhay = () => {
-        navigate("/gioithieu2")
+        navigate("/GioiThieuTruong")
     }
   return (
     <div>
@@ -13,4 +13,4 @@ const GioiThieu= () =>{
   )
 }
 
-export default GioiThieu
+export default GioiThieuTruong

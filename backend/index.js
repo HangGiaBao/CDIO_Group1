@@ -8,6 +8,7 @@ const authRoute = require("./routes/auth");
 const userRoute = require("./routes/user");
 const thongBaoRoute = require("./routes/thongbao");
 const giaoVienRoute = require("./routes/giaovien");
+const hocTapRoute = require("./routes/hoctap"); // 🔥 Import API Học Tập
 
 const app = express();
 
@@ -43,6 +44,7 @@ app.use("/v1/auth", authRoute);
 app.use("/v1/user", userRoute);
 app.use("/v1/thongbao", thongBaoRoute);
 app.use("/v1/giaovien", giaoVienRoute);
+app.use("/v1/hoctap", hocTapRoute); // 🔥 Thêm API Học Tập
 
 // ✅ Route kiểm tra server hoạt động
 app.get("/", (req, res) => {

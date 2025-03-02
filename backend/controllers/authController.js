@@ -129,12 +129,32 @@ const authController = {
         }
     },
 
-    // Đăng xuất
-    userLogout: async (req, res) => {
-        res.clearCookie("refreshToken");
-        refreshTokens = refreshTokens.filter(token => token !== req.cookies.refreshToken);
-        res.status(200).json({ message: "Logged out successfully!" });
+   // Đăng xuất
+userLogout: async (req, res) => {
+    try {
+        const refreshToken = req.cookies.refreshToken;
+
+        if (!refreshToken) {
+            return res.status(401).json({ message: "Không tìm thấy token!" });
+        }
+
+        // Xóa refresh token khỏi danh sách
+        refreshTokens = refreshTokens.filter(token => token !== refreshToken);
+
+        // Xóa refresh token trong cookie
+        res.clearCookie("refreshToken", {
+            httpOnly: true,
+            secure: false,
+            path: "/",
+            sameSite: "strict",
+        });
+
+        return res.status(200).json({ message: "Đăng xuất thành công!" });
+    } catch (error) {
+        return res.status(500).json({ message: "Lỗi server khi đăng xuất!", error });
     }
+}
+
 };
 
 module.exports = authController;

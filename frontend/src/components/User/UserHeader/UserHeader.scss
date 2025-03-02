@@ -1,8 +1,37 @@
 .userHeader-container {
     border: 1px solid rgb(77, 173, 220);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+    background-color: #9be1ff;
+
     .header-logo {
         img {
-            height: 100px;
+            height: 120px; /* Giảm kích thước logo */
+            cursor: pointer;
+        }
+    }
+
+    .logout-button {
+        height: 60px;
+        width: 120px;
+        padding: 4px 8px;
+        background-color: #1536dd;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: bold;
+        transition: background 0.3s;
+        text-align: center;
+        white-space: nowrap;
+        
+
+        &:hover {
+            background-color: #ffffff;
+            color: #1536dd;
         }
     }
 }

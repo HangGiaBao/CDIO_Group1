@@ -18,4 +18,7 @@ router.put('/:id', middlewareController.verifyToken, userController.updateUser);
 //DELETE USER
 router.delete('/:id', middlewareController.verifyTokenAndAdmin, userController.deleteUser);
 
+//HOCTAP USER
+
+
 module.exports = router;
