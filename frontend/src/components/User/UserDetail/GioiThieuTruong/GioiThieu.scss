@@ -1,0 +1,80 @@
+/* Thêm phong cách cho Carousel */
+.gioi-thieu-container {
+  text-align: center;
+  padding: 2rem;
+  max-width: 100%;
+  margin-left: 400px;
+}
+
+.carousel {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;  /* Bo tròn góc ảnh */
+  object-fit: cover;  /* Đảm bảo ảnh không bị méo, giữ tỷ lệ */
+}
+
+/* Tùy chỉnh các tiêu đề và phần nội dung bên dưới carousel */
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fbbf24; /* Màu vàng */
+  margin-top: 2rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #1f2937; /* Màu xám đậm */
+  margin-top: 1rem;
+}
+
+.description {
+  font-size: 1rem;
+  color: #374151; /* Màu xám nhạt */
+  margin-top: 1rem;
+  line-height: 1.5;
+  text-align: center;
+
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #374151; /* Màu xám nhạt */
+  margin-top: 2rem;
+}
+
+.section-text {
+  font-size: 23px;
+  color: #374151;
+  margin-top: 1rem;
+  text-align: justify;
+  line-height: 1.6;
+  width: 800px;
+}
+
+/* Responsive - Điều chỉnh cho các màn hình nhỏ */
+@media (max-width: 768px) {
+  .title {
+      font-size: 2rem;
+  }
+
+  .subtitle {
+      font-size: 1.2rem;
+  }
+
+  .description {
+      font-size: 0.9rem;
+  }
+
+  .section-title {
+      font-size: 1.2rem;
+  }
+
+  
+}
