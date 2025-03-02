@@ -1,0 +1,83 @@
+.auth-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;  /* Thay vì fix cứng 715px */
+    width: 100vw;   /* Thay vì fix cứng 1510px */
+    background: url("../assets/images/background2.jpg") no-repeat center center/cover;
+}
+
+.auth-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa input và button */
+    justify-content: center;
+}
+
+h2 {
+    margin-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 35px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: rgb(255, 71, 74);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: 0.3s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: rgb(255, 255, 255);
+    color: rgb(255, 71, 74);
+}
+
+span {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    color: rgb(255, 71, 74);
+    cursor: pointer;
+    text-decoration: underline;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+span:hover{
+    color: black;
+}
+
+.auth-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 120px; /* Điều chỉnh kích thước logo */
+    height: auto;
+}

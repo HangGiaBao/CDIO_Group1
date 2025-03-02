@@ -1,49 +1,41 @@
-.menuContainer {
-    display: flex;
-    height: 100vh;
-    background: #f5f5f5;
-  
-    .userMenu {
-      width: 250px;
-      background: #f8f8f8;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  
-      .menuItem {
-        background: #ffcc00;
-        padding: 12px;
-        margin: 5px 0;
-        font-weight: bold;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-  
-        &:hover {
-          background: #ffbb00;
-        }
-      }
-  
-      .subItem {
-        background: #ff9966;
-        padding: 10px;
-        margin-left: 10px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-  
-        &:hover {
-          background: #ff7755;
-        }
-      }
-    }
-  
-    .menuContent {
-      flex: 1;
-      padding: 20px;
-      background: white;
-      border-left: 2px solid #ddd;
-    }
-  }
-  
+.menuItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Canh lề cho icon */
+  height: 60px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  margin-top: 5px;
+  text-align: center;
+  transition: 0.3s;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menuItem:hover {
+  background-color: #0056b3;
+}
+
+.arrowIcon {
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.subItem {
+  padding: 8px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #f1f1f1;
+  border-left: 4px solid #007bff;
+  margin-left: 10px;
+  transition: all 0.3s ease-in-out;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.subItem:hover {
+  background-color: #e0e0e0;
+}

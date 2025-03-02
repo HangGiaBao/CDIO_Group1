@@ -4,11 +4,11 @@ import { useNavigate } from 'react-router-dom';
 const GioiThieu2 =  () =>{
     const navigate = useNavigate();
     const hanldeNhay1 = () =>{
-        navigate("/user")
+        navigate("/gioithieu1")
     }
   return (
-    <div>GioiThieu 2
-        <button onClick={()=> hanldeNhay1()}> ok</button>
+    <div>
+       
     </div>
   )
 }
