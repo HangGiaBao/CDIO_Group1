@@ -1,11 +1,11 @@
 const express = require("express");
 const GiaoVien = require("../models/giaovien"); // Sử dụng đúng tên Model
-const { authenticate, authorize } = require("../middleware/auth");
+const { verifyToken, authorize } = require("../controllers/middlewareController");
 const mongoose = require("mongoose");
 const router = express.Router();
 
 // ✅ Thêm giáo viên (Chỉ Admin)
-router.post("/", authenticate, authorize(["admin"]), async (req, res) => {
+router.post("/", verifyToken, authorize(["admin"]), async (req, res) => {
     const { full_name, subject, phone, email, photo } = req.body;
 
     if (!full_name || !subject || !phone || !email) {
@@ -27,9 +27,8 @@ router.post("/", authenticate, authorize(["admin"]), async (req, res) => {
     }
 });
 
-
 // ✅ Cập nhật thông tin giáo viên (Chỉ Admin)
-router.put("/:id", authenticate, authorize(["admin"]), async (req, res) => {
+router.put("/:id", verifyToken, authorize(["admin"]), async (req, res) => {
     const { id } = req.params;
 
     if (!mongoose.Types.ObjectId.isValid(id)) {
@@ -51,7 +50,7 @@ router.put("/:id", authenticate, authorize(["admin"]), async (req, res) => {
 });
 
 // ✅ Xóa giáo viên (Chỉ Admin)
-router.delete("/:id", authenticate, authorize(["admin"]), async (req, res) => {
+router.delete("/:id", verifyToken, authorize(["admin"]), async (req, res) => {
     const { id } = req.params;
 
     if (!mongoose.Types.ObjectId.isValid(id)) {
@@ -72,3 +71,4 @@ router.delete("/:id", authenticate, authorize(["admin"]), async (req, res) => {
 });
 
 module.exports = router;
+        

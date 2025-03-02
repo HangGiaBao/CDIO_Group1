@@ -1,6 +1,6 @@
 const express = require("express");
 const thongtintruonghoc = require("../models/thongtintruonghoc");
-const { authenticate, authorize } = require("../middleware/auth");
+const { authenticate, authorize } = require("./auth");
 
 const router = express.Router();
 
