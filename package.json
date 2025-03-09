@@ -1,40 +1,9 @@
 {
-<<<<<<< HEAD
   "dependencies": {
     "axios": "^1.8.2",
     "dotenv": "^16.4.7",
     "react-icons": "^5.5.0",
     "socket.io": "^4.8.1",
     "socket.io-client": "^4.8.1"
-=======
-  "name": "cdio_1",
-  "version": "1.0.0",
-  "description": "",
-  "main": "backend/index.js",
-  "scripts": {
-    "start": "node backend/index.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.7.2",
-    "bcrypt": "^5.1.1",
-    "bcryptjs": "^2.4.3",
-    "cookie-parser": "^1.4.6",
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "express": "^4.21.2",
-    "jsonwebtoken": "^9.0.2",
-    "mongodb": "^6.13.1",
-    "mongoose": "^6.13.8",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^5.5.0",
-    "react-router-dom": "^6.18.0",
-    "sass": "^1.85.1"
-  },
-  "devDependencies": {
-    "cross-env": "^7.0.3"
->>>>>>> 955f45ffd5889e74a5708fb3e3bdea7c6ac362a4
   }
 }

@@ -28,7 +28,7 @@ const GioiThieuDoiNguGiaoVien = () => {
           <div className="icon">
             <img src={GVA3} alt="Thumbs Up" className='anh1'/>
           </div>
-          <h2 className="section-title">BAN GIÁM HIỆU</h2>
+          <h2 className="section-title2">BAN GIÁM HIỆU</h2>
         </div>
         <p className="section-description">
           Trường Mầm Non Anh Đào tự hào có đội ngũ lãnh đạo gồm các cô giáo được đào tạo bài bản và chuyên sâu về giáo dục mầm non, có tâm huyết với sự nghiệp giáo dục, có kinh nghiệm quản lý thực tế trường mầm non nhiều năm.
@@ -41,7 +41,7 @@ const GioiThieuDoiNguGiaoVien = () => {
           <div className="icon">
             <img src={GV2} alt="Thumbs Up"className='anh1'/> 
           </div>
-          <h2 className="section-title">GIÁO VIÊN</h2>
+          <h2 className="section-title2">GIÁO VIÊN</h2>
         </div>
         <p className="section-description">
           Trường Mầm Non Anh Đào có một đội ngũ giáo viên tâm huyết, tận tụy với nghề, hết lòng yêu thương con trẻ.
@@ -54,7 +54,7 @@ const GioiThieuDoiNguGiaoVien = () => {
           <div className="icon">
             <img src={GVA1} alt="Thumbs Up"className='anh1'/> 
           </div>
-          <h2 className="section-title">BẢO MẪU</h2>
+          <h2 className="section-title2">BẢO MẪU</h2>
         </div>
         <p className="section-description">
           Đội ngũ bảo mẫu sạch sẽ, cẩn thận, yêu thương trẻ, tận tâm trong công việc. Tất cả các cô nuôi đều có chứng chỉ cô nuôi dạy trẻ do trường Đại Học Sư Phạm thành phố Hồ Chí Minh, trường Cao Đẳng Sư Phạm Mẫu Giáo Trung Ương 3, trường Đại Học Sài Gòn cấp. Tất cả các cô nuôi đều được tham dự các khóa học sơ cấp cứu và vệ sinh an toàn thực phẩm.
@@ -67,7 +67,7 @@ const GioiThieuDoiNguGiaoVien = () => {
           <div className="icon">
             <img src={GVA2} alt="Thumbs Up" className='anh1'/> 
           </div>
-          <h2 className="section-title">ĐỘI NGŨ CẤP DƯỠNG</h2>
+          <h2 className="section-title2">ĐỘI NGŨ CẤP DƯỠNG</h2>
         </div>
         <p className="section-description">
           Trường Mầm Non Anh Đào có một đội ngũ cấp dưỡng nhiều năm kinh nghiệm, được đào tạo chuyên nghiệp phục vụ cho trẻ mầm non. Có chứng chỉ vệ sinh an toàn thực phẩm, sức khỏe tốt, có chứng chỉ nấu ăn chuyên nghiệp.
@@ -80,7 +80,7 @@ const GioiThieuDoiNguGiaoVien = () => {
           <div className="icon">
             <img src={GV} alt="Thumbs Up" className='anh1'/> 
           </div>
-          <h2 className="section-title">ĐỘI NGŨ TƯ VẤN VIÊN</h2>
+          <h2 className="section-title2">ĐỘI NGŨ TƯ VẤN VIÊN</h2>
         </div>
         <p className="section-description">
           Có trình độ chuyên môn về giáo dục mầm non. Luôn tận tình hướng dẫn, trả lời tất cả những thắc mắc, ghi nhận tất cả yêu cầu từ quý phụ huynh và sẵn sàng hỗ trợ khi quý phụ huynh cần sự giúp đỡ.
@@ -93,7 +93,7 @@ const GioiThieuDoiNguGiaoVien = () => {
           <div className="icon">
             <img src={GVA} alt="Thumbs Up"className='anh1'/> 
           </div>
-          <h2 className="section-title">ĐỘI NGŨ NHÂN VIÊN PHỤC VỤ, BẢO VỆ</h2>
+          <h2 className="section-title2">ĐỘI NGŨ NHÂN VIÊN PHỤC VỤ, BẢO VỆ</h2>
         </div>
         <p className="section-description">
           Có sức khỏe tốt, tận tụy, nhiệt tình, cẩn thận, chu đáo. Có nghiệp vụ chuyên môn để thực hiện tốt nhiệm vụ.

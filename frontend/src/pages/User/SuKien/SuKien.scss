@@ -1,0 +1,66 @@
+.SuKien {
+    margin: 0 auto;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+
+    > .SuKien-item {
+        background-color: #757575;
+    border: #424242 solid 10px;
+    border-radius: 20px;
+    display: flex
+;
+    align-items: center;
+    padding: 30px;
+    transition: transform 0.3s ease-in-out;
+    width: 1600px;
+    margin-left: 41px;
+    margin-top: 13px;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        > .SuKien-image {
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            border-radius: 15px;
+            margin-right: 25px;
+            background-color: #fff;
+            position: relative;
+        
+            img {
+                width: auto; // Để ảnh không bị méo
+                height: 100%;
+                max-width: 100%;
+                object-fit: contain; // Thay vì cover, giữ nguyên tỉ lệ
+                border-radius: 10px;
+            }
+        }
+        
+        > .SuKien-content {
+            flex: 1;
+            text-align: left;
+
+            h2 {
+                font-size: 26px;
+                color: #fff;
+                margin-bottom: 8px;
+                font-weight: bold;
+            }
+
+            p {
+                font-size: 18px;
+                color: #f1f1f1;
+            }
+        }
+    }
+}
+

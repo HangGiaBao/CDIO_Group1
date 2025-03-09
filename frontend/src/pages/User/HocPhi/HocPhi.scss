@@ -1,0 +1,78 @@
+.fee-container1 {
+  width: 80%; // Tăng độ rộng của bảng
+  padding-right: 100px;
+  margin-left: 350px;
+}
+
+.fee-header {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fee-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #ddd;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: #bbb;
+}
+
+.btn.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.fee-container_d1 {
+  text-align: center;
+  border-radius: 20px;
+  background-color: #9be1ff;
+  padding: 50px;
+  font-size: 20px; // Tăng kích thước chữ cho dễ nhìn
+  font-weight: bold;
+}
+
+.fee-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-size: 18px; // Tăng kích thước chữ của bảng
+
+  th,
+  td {
+    border: 1px solid #333;
+    padding: 15px; // Tăng khoảng cách giữa nội dung và viền ô
+    text-align: left;
+  }
+
+  th {
+    background: #ccc;
+    font-size: 20px; // Làm tiêu đề nổi bật hơn
+    text-align: center;
+  }
+
+  .total-row {
+    font-weight: bold;
+    background: #e0e0e0;
+    text-align: right;
+  }
+}

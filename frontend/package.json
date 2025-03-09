@@ -8,7 +8,6 @@
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.8.1",
-<<<<<<< HEAD
     "frontend": "file:",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -18,14 +17,6 @@
     "react-slick": "^0.30.3",
     "react-toastify": "^11.0.5",
     "sass": "^1.85.1",
-=======
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.18.0",
-    "react-scripts": "5.0.1",
-    "react-slick": "^0.30.3",
-    "react-toastify": "^11.0.5",
->>>>>>> 955f45ffd5889e74a5708fb3e3bdea7c6ac362a4
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
@@ -53,12 +44,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-<<<<<<< HEAD
   },
   "devDependencies": {
     "resolve-url-loader": "^5.0.0",
     "sass-loader": "^16.0.5"
-=======
->>>>>>> 955f45ffd5889e74a5708fb3e3bdea7c6ac362a4
   }
 }

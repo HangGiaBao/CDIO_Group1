@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-<<<<<<< HEAD
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { MenuProvider } from "./contexts/MenuContext";
 
@@ -28,16 +27,4 @@ root.render(
     <MenuProvider>
         <RouterProvider router={router} />
     </MenuProvider>
-=======
-import { BrowserRouter } from "react-router-dom";
-// import "./css/index.css"; 
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-    <React.StrictMode>
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
-    </React.StrictMode>
->>>>>>> 955f45ffd5889e74a5708fb3e3bdea7c6ac362a4
 );
