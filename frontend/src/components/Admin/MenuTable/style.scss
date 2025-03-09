@@ -1,0 +1,39 @@
+.menu-container {
+  text-align: center;
+  padding: 20px;
+  background: #f0f8ff;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  .menu-title {
+    color: #d91e18;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .menu-week {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .menu-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: #fff;
+  
+    th, td {
+      border: 1px solid #000;
+      padding: 10px;
+      text-align: center;
+    }
+  
+    th {
+      background-color: #ffcc00;
+    }
+  
+    td {
+      height: 50px;
+    }
+  }
+}
+

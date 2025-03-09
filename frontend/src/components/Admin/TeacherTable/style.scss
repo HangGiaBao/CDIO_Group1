@@ -1,0 +1,38 @@
+.teacher-container {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+  
+    h2 {
+      margin-bottom: 15px;
+      color: #2c3e50;
+    }
+  }
+  
+  .teacher-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ecf0f1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+    th, td {
+      border: 1px solid #bdc3c7;
+      padding: 10px;
+      text-align: left;
+    }
+  
+    th {
+      background: #3498db;
+      color: white;
+    }
+  
+    tr:nth-child(even) {
+      background: #dfe6e9;
+    }
+  
+    tr:hover {
+      background: #b2bec3;
+      transition: 0.3s;
+    }
+  }
+  

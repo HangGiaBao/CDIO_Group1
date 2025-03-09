@@ -1,0 +1,41 @@
+.menuItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Canh lề cho icon */
+  height: 60px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  margin-top: 5px;
+  text-align: center;
+  transition: 0.3s;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menuItem:hover {
+  background-color: #0056b3;
+}
+
+.arrowIcon {
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.subItem {
+  padding: 8px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #f1f1f1;
+  border-left: 4px solid #007bff;
+  margin-left: 10px;
+  transition: all 0.3s ease-in-out;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.subItem:hover {
+  background-color: #e0e0e0;
+}

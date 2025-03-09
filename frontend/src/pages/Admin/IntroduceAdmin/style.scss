@@ -1,0 +1,24 @@
+.infoSchool{
+    background-color: #333;
+    border: #000 dashed 10px;
+    color: #fff;
+    margin: 50px;
+    padding: 20px;
+}
+.admin-page{
+    margin: 0 80px;
+    >div{
+        background-color: #757575;
+        border: #424242 solid 10px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        padding: 30px;
+        img{
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.menu-container1 {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    padding-right: 50px;
+    .menu-table {
+      width: 100%;
+      max-width: 800px;
+      border-collapse: collapse;
+      text-align: center;
+      
+      th, td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        >div{
+            margin: 10px 0;
+        }
+      }
+    
+      th {
+        background-color: #a20067;
+        color: white;
+      }
+    
+      .meal-time {
+        background-color: #ffdd57;
+        font-weight: bold;
+      }
+    
+      td {
+        background-color: #f9f9f9;
+      }
+    }
+    
+  }
+  

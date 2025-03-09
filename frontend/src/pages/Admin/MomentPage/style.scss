@@ -1,0 +1,33 @@
+.momentPage{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    >div{
+        position: relative;
+        width: 100%;
+         max-width: 600px;
+        img{
+            width: 100%;
+        }
+        .activedecrease{
+            color: #fff;
+            position: absolute;
+            width: 40px;
+            cursor: pointer;
+            font-size: larger;
+            padding-top: 0;
+            padding-bottom: 5px;
+            &:hover{
+                background-color: #ff0303;
+                color: #000;
+            }
+        }
+        .buttonadd{
+            cursor: pointer;
+            display: none;
+            &.active{
+                display: block;
+            }
+        }
+    }
+}

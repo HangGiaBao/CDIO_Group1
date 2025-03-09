@@ -1,0 +1,18 @@
+.headerContent{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .linkNavigate{
+        padding: 20px;
+        a{
+            font-weight: 700;
+            text-decoration: none;
+            color: #000;
+        }
+    }
+    button{
+        padding: 10px 30px;
+        background-color: #9be1ff;
+        color: #000;
+    }
+}

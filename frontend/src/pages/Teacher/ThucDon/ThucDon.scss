@@ -1,0 +1,48 @@
+.user-menu-container {
+  background-color: #ffffff;
+  color: #4a4a4a;
+  font-family: Arial, sans-serif;
+  margin-left: 300px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 320px;
+
+  h2 {
+      color: #a20067;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+  }
+
+  .menu-table {
+      width: 100%;
+      max-width: 800px;
+      border-collapse: collapse;
+      text-align: center;
+
+      th, td {
+          border: 1px solid #ddd;
+          padding: 10px;
+          
+          > div {
+              margin: 10px 0;
+          }
+      }
+
+      th {
+          background-color: #a20067;
+          color: white;
+      }
+
+      .meal-time {
+          background-color: #ffdd57;
+          font-weight: bold;
+      }
+
+      td {
+          background-color: #f9f9f9;
+      }
+  }
+}

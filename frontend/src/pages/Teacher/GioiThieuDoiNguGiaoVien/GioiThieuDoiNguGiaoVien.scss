@@ -1,0 +1,67 @@
+body {
+    background-color: #ffffff;
+    color: #4a4a4a;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    margin-left: 500px;
+  }
+  .title1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+    margin-left: 500px;
+  }
+  
+  .team-section {
+    margin-bottom: 2rem;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+    margin-left:10px;
+}
+  .section-description {
+    font-size: 20px;
+    color: #4b4c4d;
+    margin-top: 1rem;
+    line-height: 1.5;
+    text-align: center;
+    width: 1500px;
+  }
+  .description {
+    font-size: 25px;
+    color: #374151;
+    margin-top: 1rem;
+    line-height: 1.5;
+    text-align: center;
+    width: 1500px;
+    margin-left:100px;
+  }
+.section .anh1 {
+    width: 1500px;
+    height: 500px;
+    object-fit: contain;
+    margin-left: 40px;
+}
+.section .section-header .section-description .anh2 {
+    width: 1500px;
+    height: 500px;
+    object-fit: contain;
+    margin-left: 10px;
+}
+
+.container h2 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  margin-left:500px;
+}

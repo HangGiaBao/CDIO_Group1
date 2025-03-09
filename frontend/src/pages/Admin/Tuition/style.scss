@@ -1,0 +1,32 @@
+.fee-container {
+    width: 60%;
+    margin: 20px auto;
+  }
+  .fee-container_d{
+    text-align: center;
+    border-radius: 20px;
+    background-color: #9Be1FF;
+    padding: 50px;
+  }
+  .fee-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+    th, td {
+      border: 1px solid #333;
+      padding: 10px;
+      text-align: left;
+    }
+  
+    th {
+      background: #ccc;
+    }
+  
+    .total-row {
+      font-weight: bold;
+      background: #e0e0e0;
+    }
+  }
+  

@@ -1,0 +1,12 @@
+.actionComponent{
+    display: flex;
+    justify-content: space-evenly;
+    button{
+        max-width: 200px;
+        &.change{
+            background-color: #9be1ff;
+            color: #000;
+        }
+        
+    }
+}

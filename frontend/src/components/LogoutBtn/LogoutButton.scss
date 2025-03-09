@@ -1,0 +1,18 @@
+.logout-button {
+    padding: 10px 16px;
+    background-color: #d9534f; // Màu đỏ nhẹ
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease-in-out;
+
+    &:hover {
+        background-color: #cc6e6b; // Đổi màu khi hover
+    }
+
+    &:active {
+        background-color: #ac2925;
+    }
+}
