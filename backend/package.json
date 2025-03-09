@@ -7,7 +7,10 @@
     "accepts": "^1.3.8",
     "append-field": "^1.0.0",
     "array-flatten": "^1.1.1",
+<<<<<<< HEAD
     "backend": "file:",
+=======
+>>>>>>> 955f45ffd5889e74a5708fb3e3bdea7c6ac362a4
     "bcryptjs": "^3.0.2",
     "body-parser": "^1.20.3",
     "bson": "^6.10.3",
@@ -21,7 +24,10 @@
     "content-disposition": "^0.5.4",
     "content-type": "^1.0.5",
     "cookie": "^0.7.1",
+<<<<<<< HEAD
     "cookie-parser": "^1.4.7",
+=======
+>>>>>>> 955f45ffd5889e74a5708fb3e3bdea7c6ac362a4
     "cookie-signature": "^1.0.6",
     "core-util-is": "^1.0.3",
     "cors": "^2.8.5",
@@ -116,12 +122,19 @@
     "unpipe": "^1.0.0",
     "util-deprecate": "^1.0.2",
     "utils-merge": "^1.0.1",
+<<<<<<< HEAD
     "uuid": "^11.1.0",
+=======
+>>>>>>> 955f45ffd5889e74a5708fb3e3bdea7c6ac362a4
     "vary": "^1.1.2",
     "webidl-conversions": "^7.0.0",
     "whatwg-url": "^14.1.1",
     "xtend": "^4.0.2"
   },
+<<<<<<< HEAD
+=======
+  "devDependencies": {},
+>>>>>>> 955f45ffd5889e74a5708fb3e3bdea7c6ac362a4
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
