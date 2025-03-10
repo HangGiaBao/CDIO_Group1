@@ -45,6 +45,8 @@ const ClassDetail = () => {
 
     const handleSaveClick = async () => {
         try {
+            console.log("🔥 Gửi yêu cầu cập nhật:", editedStudent);
+
             const res = await fetch(`http://localhost:5001/v1/classes/${id}/students/${editedStudent._id}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
@@ -53,7 +55,10 @@ const ClassDetail = () => {
 
             if (!res.ok) throw new Error("Lỗi khi cập nhật thông tin học sinh");
 
-            const updatedStudent = await res.json();
+            // Nhận object chứa `student`
+            const { student: updatedStudent } = await res.json();
+
+            console.log("✅ Học sinh đã cập nhật:", updatedStudent);
 
             setClassDetail((prev) => ({
                 ...prev,

@@ -14,11 +14,10 @@ const AdminHeader = () => {
 
   return (
     <div className='adminHeader-container'>
-      <div className="header-logo">
+      <div className="header-logo" onClick={() => navigate('/admin')}>
         <img src={logo} alt="Logo" />
       </div>
       <div className="header-actions">
-        <button className="admin-btn">Admin</button>
         <button className="logout-btn" onClick={handleLogout}>Đăng xuất</button>
       </div>
     </div>

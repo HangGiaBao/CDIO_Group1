@@ -63,7 +63,7 @@ const Menu = () => {
                 {openMenu === "lichhoc" && (
                     <>
                         {/* Thêm id nếu có classid */}
-                        <div className="subItem" onClick={() => handleNavigate(`/admin/ClassSchedule/${classid}`)}>Thời khóa biểu</div>
+                        <div className="subItem" onClick={() => handleNavigate(`/admin/ClassSchedule`)}>Thời khóa biểu</div>
                         <div className="subItem" onClick={() => handleNavigate("/admin/MenuPage")}>Thực đơn</div>
                     </>
                 )}
