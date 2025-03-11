@@ -1,13 +1,14 @@
 import React from 'react';
-import './GioiThieuDoiNguGiaoVien.scss';  // Import SCSS styles
+import './GioiThieuDoiNguGiaoVien.scss';
 import { useNavigate } from 'react-router-dom';
-import GVA3 from "../../../assets/images/GVA3.jpg"
-import GVA1 from "../../../assets/images/GVA1.jpeg"
-import GVA from "../../../assets/images/GVA.webp"
-import GV from "../../../assets/images/GV.jpg"
-import GV2 from "../../../assets/images/GV2.jpg"
-import GVA2 from "../../../assets/images/GVA2.jpg"
-import GVA4 from "../../../assets/images/GVA4.png"
+import GVA3 from "../../../assets/images/GVA3.jpg";
+import GVA1 from "../../../assets/images/GVA1.jpeg";
+import GVA from "../../../assets/images/GVA.webp";
+import GV from "../../../assets/images/GV.jpg";
+import GV2 from "../../../assets/images/GV2.jpg";
+import GVA2 from "../../../assets/images/GVA2.jpg";
+import GVA4 from "../../../assets/images/GVA4.png";
+
 const GioiThieuDoiNguGiaoVien = () => {
   const navigate = useNavigate();
 
@@ -17,93 +18,89 @@ const GioiThieuDoiNguGiaoVien = () => {
 
   return (
     <div className="container">
-      <h1 className="title1">Đội ngũ nhân sự</h1>
-      <p className="description">
-        Đội ngũ cán bộ quản lý, giáo viên, nhân viên có đạo đức, lối sống lành mạnh, yêu thương trẻ thơ, tận tụy, công bằng và đầy trách nhiệm. Tất cả đều có trình độ đạt chuẩn và tay nghề cao, có năng lực chuyên môn và phương pháp phù hợp để đáp ứng nhu cầu phát triển mỗi ngày của trẻ. Hội đồng sư phạm nhà trường luôn có thái độ đúng mực, chân thành, hợp tác và đáp ứng những nhu cầu chính đáng của phụ huynh, tất cả vì sự phát triển của trẻ.
-      </p>
+      <h1 className="title1">ĐỘI NGŨ NHÂN SỰ</h1>
+      <p className="intro-description">
+        Đội ngũ nhân sự của Trường Mầm Non Anh Đào bao gồm các cán bộ quản lý, giáo viên, bảo mẫu, cấp dưỡng và nhân viên phục vụ có trình độ chuyên môn cao, yêu nghề, tận tâm và trách nhiệm. Chúng tôi cam kết mang lại môi trường học tập an toàn, thân thiện và phát triển toàn diện cho trẻ.      </p>
 
-      {/* Section: Ban Giám Hiệu */}
       <div className="section">
         <div className="section-header">
           <div className="icon">
-            <img src={GVA3} alt="Thumbs Up" className='anh1'/>
+            <img src={GVA3} alt="Thumbs Up" className='anh1' />
           </div>
-          <h2 className="section-title2">BAN GIÁM HIỆU</h2>
+          <h1 className="title1">BAN GIÁM HIỆU</h1>
         </div>
-        <p className="section-description">
-          Trường Mầm Non Anh Đào tự hào có đội ngũ lãnh đạo gồm các cô giáo được đào tạo bài bản và chuyên sâu về giáo dục mầm non, có tâm huyết với sự nghiệp giáo dục, có kinh nghiệm quản lý thực tế trường mầm non nhiều năm.
-        </p>
+        <p className="section-description">Ban Giám Hiệu của trường là những người có kinh nghiệm lâu năm trong lĩnh vực giáo dục mầm non, có trình độ chuyên môn cao và luôn tận tâm với sự nghiệp giáo dục trẻ em.</p>
       </div>
 
-      {/* Section: Giáo Viên */}
       <div className="section">
         <div className="section-header">
           <div className="icon">
-            <img src={GV2} alt="Thumbs Up"className='anh1'/> 
+            <img src={GV2} alt="Thumbs Up" className='anh1' />
           </div>
-          <h2 className="section-title2">GIÁO VIÊN</h2>
+          <h1 className="title1">GIÁO VIÊN</h1>
         </div>
         <p className="section-description">
-          Trường Mầm Non Anh Đào có một đội ngũ giáo viên tâm huyết, tận tụy với nghề, hết lòng yêu thương con trẻ.
+          Đội ngũ giáo viên của trường là những người có chuyên môn vững vàng, luôn tận tâm, yêu thương trẻ và không ngừng học hỏi, sáng tạo để nâng cao chất lượng giảng dạy.
         </p>
       </div>
 
-      {/* Section: Bảo Mẫu */}
       <div className="section">
         <div className="section-header">
           <div className="icon">
-            <img src={GVA1} alt="Thumbs Up"className='anh1'/> 
+            <img src={GVA1} alt="Thumbs Up" className='anh1' />
           </div>
-          <h2 className="section-title2">BẢO MẪU</h2>
+          <h1 className="title1">BẢO MẪU</h1>
         </div>
         <p className="section-description">
-          Đội ngũ bảo mẫu sạch sẽ, cẩn thận, yêu thương trẻ, tận tâm trong công việc. Tất cả các cô nuôi đều có chứng chỉ cô nuôi dạy trẻ do trường Đại Học Sư Phạm thành phố Hồ Chí Minh, trường Cao Đẳng Sư Phạm Mẫu Giáo Trung Ương 3, trường Đại Học Sài Gòn cấp. Tất cả các cô nuôi đều được tham dự các khóa học sơ cấp cứu và vệ sinh an toàn thực phẩm.
+          Đội ngũ bảo mẫu có đầy đủ chứng chỉ chuyên môn, giàu kinh nghiệm, chu đáo và tận tâm trong việc chăm sóc trẻ, tạo môi trường an toàn và thân thiện.
         </p>
       </div>
 
-      {/* Section: Cấp Dưỡng */}
       <div className="section">
         <div className="section-header">
           <div className="icon">
-            <img src={GVA2} alt="Thumbs Up" className='anh1'/> 
+            <img src={GVA2} alt="Thumbs Up" className='anh1' />
           </div>
-          <h2 className="section-title2">ĐỘI NGŨ CẤP DƯỠNG</h2>
+          <h1 className="title1">ĐỘI NGŨ CẤP DƯỠNG</h1>
         </div>
         <p className="section-description">
-          Trường Mầm Non Anh Đào có một đội ngũ cấp dưỡng nhiều năm kinh nghiệm, được đào tạo chuyên nghiệp phục vụ cho trẻ mầm non. Có chứng chỉ vệ sinh an toàn thực phẩm, sức khỏe tốt, có chứng chỉ nấu ăn chuyên nghiệp.
+          Những cô cấp dưỡng có nhiều năm kinh nghiệm, được đào tạo bài bản về dinh dưỡng và vệ sinh an toàn thực phẩm, đảm bảo cung cấp những bữa ăn ngon miệng và đầy đủ dinh dưỡng cho trẻ.
         </p>
       </div>
 
-      {/* Section: Tư Vấn Viên */}
       <div className="section">
         <div className="section-header">
           <div className="icon">
-            <img src={GV} alt="Thumbs Up" className='anh1'/> 
+            <img src={GV} alt="Thumbs Up" className='anh1' />
           </div>
-          <h2 className="section-title2">ĐỘI NGŨ TƯ VẤN VIÊN</h2>
+          <h1 className="title1">ĐỘI NGŨ TƯ VẤN VIÊN</h1>
         </div>
         <p className="section-description">
-          Có trình độ chuyên môn về giáo dục mầm non. Luôn tận tình hướng dẫn, trả lời tất cả những thắc mắc, ghi nhận tất cả yêu cầu từ quý phụ huynh và sẵn sàng hỗ trợ khi quý phụ huynh cần sự giúp đỡ.
+          Tư vấn viên của trường luôn sẵn sàng hỗ trợ, giải đáp thắc mắc của phụ huynh, đồng thời cung cấp thông tin cần thiết để giúp các bậc cha mẹ yên tâm khi gửi gắm con em mình.
         </p>
       </div>
+      <div className="section">
+  <div className="section-header">
+    <div className="icon">
+      <img src={GV} alt="Nhân viên phục vụ và bảo vệ" className="anh1" />
+    </div>
+    <h1 className="title2">ĐỘI NGŨ NHÂN VIÊN PHỤC VỤ, BẢO VỆ</h1>
+  </div>
+  <p className="section-description1">
+    Nhân viên phục vụ và bảo vệ của trường là những người tận tụy, nhiệt tình, luôn đảm bảo sự sạch sẽ, an toàn và trật tự trong khuôn viên trường học.
+  </p>
+  <div className="icon">
+    <img src={GVA4} alt="Nhân viên phục vụ và bảo vệ" className="anh2" />
+  </div>
+</div>
 
-      {/* Section: Nhân Viên Phục Vụ */}
-      <div className="section">
-        <div className="section-header">
-          <div className="icon">
-            <img src={GVA} alt="Thumbs Up"className='anh1'/> 
-          </div>
-          <h2 className="section-title2">ĐỘI NGŨ NHÂN VIÊN PHỤC VỤ, BẢO VỆ</h2>
-        </div>
-        <p className="section-description">
-          Có sức khỏe tốt, tận tụy, nhiệt tình, cẩn thận, chu đáo. Có nghiệp vụ chuyên môn để thực hiện tốt nhiệm vụ.
-        </p>
-        <img src={GVA4} alt="Thumbs Up"className='anh1'/> 
-      </div>
+
+
     </div>
   );
 };
 
 export default GioiThieuDoiNguGiaoVien;
+
 
 

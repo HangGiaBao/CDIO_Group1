@@ -1,60 +1,35 @@
 import React from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Halloween from '../../../assets/images/Halloween.jpg';
-import GS from '../../..//assets/images/GS.jpg';
+import GS from '../../../assets/images/GS.jpg';
 import Tet from '../../../assets/images/Tet.jpg';
 import HeaderContent from '../../../components/Admin/HeaderContent/HeaderContent';
 import './SuKien.scss';
 
+const events = [
+    { id: 1, name: "Halloween", date: "31/10/2025", image: Halloween },
+    { id: 2, name: "Giáng Sinh", date: "25/12/2025", image: GS },
+    { id: 3, name: "Tết Âm", date: "10/02/2026", image: Tet },
+];
+
 const SuKien = () => {
-    const [modalAdd, setModalAdd] = React.useState(false);
-    const [active, setActive] = React.useState(false);
-    const [toggle, setToggle] = React.useState(false);
     const navigate = useNavigate();
-    const location = useLocation();
-    const lastSegment = location.pathname.split("/").filter(Boolean).pop();
-
-    const toggleModal1 = () => {
-        setActive(false);
-        setToggle(false);
-        setModalAdd(false);
-    };
-
-    const hanldeNhay1 = () => {
-        navigate("/SuKien");
-    };
 
     return (
-        <div>
+        <div className="su-kien">
             <HeaderContent nameNavigate={"Sự Kiện"} />
-            <div className="SuKien">
-                <div className="SuKien-item">
-                    <div className="SuKien-image">
-                        <img src={Halloween} alt="Halloween" />
+            <div className="su-kien-list">
+                {events.map((event) => (
+                    <div key={event.id} className="su-kien-item">
+                        <div className="su-kien-image">
+                            <img src={event.image} alt={event.name} />
+                        </div>
+                        <div className="su-kien-content">
+                            <h2>{event.name}</h2>
+                            <p>Sự kiện {event.name} sẽ bắt đầu từ ngày {event.date}.</p>
+                        </div>
                     </div>
-                    <div className="SuKien-content">
-                        <h2>Halloween</h2>
-                        <p>Sự Kiện Halloween sẽ bắt đầu từ ngày......................................</p>
-                    </div>
-                </div>
-                <div className="SuKien-item">
-                    <div className="SuKien-image">
-                        <img src={GS} alt="Giáng Sinh" />
-                    </div>
-                    <div className="SuKien-content">
-                        <h2>Giáng Sinh</h2>
-                        <p>Sự Kiện Giáng Sinh sẽ bắt đầu từ ngày.....................................</p>
-                    </div>
-                </div>
-                <div className="SuKien-item">
-                    <div className="SuKien-image">
-                        <img src={Tet} alt="Tết Âm" />
-                    </div>
-                    <div className="SuKien-content">
-                        <h2>Tết Âm</h2>
-                        <p>Sự Kiện Tết Âm sẽ bắt đầu từ ngày..........................</p>
-                    </div>
-                </div>
+                ))}
             </div>
         </div>
     );

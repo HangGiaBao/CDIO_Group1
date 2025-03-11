@@ -1,38 +1,47 @@
-.teacher1 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    max-width: 800px;
-    margin: 20px auto;
-  
-    .teacher-info {
-      flex: 1;
-      padding: 30px;
-      padding-bottom: 285px;
-      height: auto;
-  
-      p {
-        font-size: 30px;
-        color: #333;
-        margin: 8px 0;
-        width: 900px;
-        
-        strong {
-          color: #000;
-        }
-      }
+.teacherDetailUserContainer {
+  background: linear-gradient(to right, #9bf3d1, #e5ff7e);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 1000px;
+  margin-left: 200px;
+  margin-top: 50px;
+  font-family: Arial, sans-serif;
+
+  h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #302828;
+    margin-bottom: 20px;
+  }
+
+  .teacher-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    font-size: 18px;
+    color: #555;
+
+    p {
+      margin: 10px 0;
     }
-  
-    .teacherimage {
-      flex-shrink: 0;
-      
-      img {
-        width: 600px; // Tăng kích thước ảnh
-        height: auto;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        margin-left: -px;
-      }
+
+    strong {
+      color: #333;
+    }
+
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 2px solid #ddd;
     }
   }
+
+  .error-message {
+    color: red;
+    font-size: 18px;
+    text-align: center;
+  }
+}

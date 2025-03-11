@@ -29,7 +29,7 @@ const MenuPage = () => {
         <HeaderContent nameNavigate={"Thực đơn"} Active={false}  nameActive={"Hủy"} toggleModal1={toggleModal1}/>
         {active?<MenuTable/>:<MenuSchedule/>}
         
-        <ActionComponent btn1={"Chỉnh sửa"} btn2={"Trở lại"} btn3={modalAdd?"Xác nhận":"Cập Nhât"} active={active1} setModal={setModalAdd} toggle={toggle} setActive={setActive} toggleModal={toggleModal} toggleModal1={toggleModal1}/>
+        <ActionComponent btn1={"Chỉnh sửa"} btn2={"Trở lại"} btn3={modalAdd?"Xác nhận":"Cập Nhật"} active={active1} setModal={setModalAdd} toggle={toggle} setActive={setActive} toggleModal={toggleModal} toggleModal1={toggleModal1}/>
     </div>
   )
 }

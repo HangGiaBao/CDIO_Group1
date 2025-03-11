@@ -1,29 +1,51 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import HeaderContent from '../../../components/Admin/HeaderContent/HeaderContent';
-import image1 from '../../../assets/images/teacher1.jpg';  
-import './ThongTinGiaoVienChuNhiem.scss';  // Sửa đường dẫn nếu cần
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
+import "./ThongTinGiaoVienChuNhiem.scss";
 
-const ThongTinGiaoVienChuNhiem = () => {
-  const navigate = useNavigate();
+const TeacherDetailUser = () => {
+  const { id } = useParams(); // Lấy ID từ URL
+  const [teacher, setTeacher] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    // Gọi API để lấy thông tin giáo viên theo ID
+    axios
+      .get(`http://localhost:5001/v1/giaovien/${id}`)
+      .then((response) => {
+        setTeacher(response.data.data); // Lưu dữ liệu giáo viên vào state
+        setLoading(false); // Đánh dấu là đã tải xong
+      })
+      .catch((error) => {
+        console.error("Có lỗi xảy ra khi lấy thông tin giáo viên:", error);
+        setError("Không thể tải thông tin giáo viên.");
+        setLoading(false); // Đánh dấu là đã tải xong (kể cả khi có lỗi)
+      });
+  }, [id]);
+
+  if (loading) {
+    return <div>Đang tải thông tin giáo viên...</div>; // Hiển thị khi đang tải dữ liệu
+  }
+
+  if (error) {
+    return <div>{error}</div>; // Hiển thị lỗi nếu có
+  }
 
   return (
-    <div>
-      <HeaderContent nameNavigate="Thông tin của giáo viên" />
-      <div className='teacher1'>
-        <div className='teacher-info'>
-          <p><strong>Tên giáo viên:</strong> Nguyễn Văn A</p>
-          <p><strong>Giới tính:</strong> Nam</p>
-          <p><strong>Gmail:</strong> nguyenvana@gmail.com</p>
-          <p><strong>Số điện thoại:</strong> 01304058302</p>
-          <p><strong>Dạy lớp:</strong> Hoa Hồng</p>
+    <div className="teacherDetailUserContainer">
+      <h2>Thông Tin Giáo Viên</h2>
+      {teacher && (
+        <div className="teacher-info">
+          <p><strong>Họ và Tên:</strong> {teacher.full_name}</p>
+          <p><strong>Dạy lớp:</strong> {teacher.class}</p>
+          <p><strong>Số điện thoại:</strong> {teacher.phone}</p>
+          <p><strong>Email:</strong> {teacher.email}</p>
+          <p><strong>Ảnh:</strong> <img src={teacher.photo || "default-image.jpg"} alt="Teacher" /></p>
         </div>
-        <div className='teacherimage'>
-          <img src={image1} alt="Giáo viên" />
-        </div>
-      </div>
+      )}
     </div>
   );
 };
 
-export default ThongTinGiaoVienChuNhiem;
+export default TeacherDetailUser;

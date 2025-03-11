@@ -1,7 +1,7 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 import UserHeader from '../UserHeader/UserHeader';
 import Menu from '../UserMenu/Menu';
-import UserDetail from '../UserDetail/UserDetail';
 import UserFooter from '../UserFooter/UserFooter';
 import './UserHomePage.scss';
 
@@ -16,7 +16,7 @@ const UserHomePage = () => {
           <Menu />
         </div>
         <div className='userDetail'>
-          <UserDetail />
+          <Outlet />
         </div>  
       </div>
       <div className='userFooter'>

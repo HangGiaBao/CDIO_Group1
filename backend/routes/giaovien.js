@@ -1,34 +1,31 @@
 const express = require("express");
-const GiaoVien = require("../models/giaovien"); // Sử dụng đúng tên Model
-const { verifyToken, authorize } = require("../controllers/middlewareController");
+const GiaoVien = require("../models/giaovien");
 const mongoose = require("mongoose");
+
 const router = express.Router();
 
-// ✅ Thêm giáo viên (Chỉ Admin)
-router.post("/", verifyToken, authorize(["admin"]), async (req, res) => {
-    const { full_name, subject, phone, email, photo } = req.body;
-
-    if (!full_name || !subject || !phone || !email) {
-        return res.status(400).json({ message: "Vui lòng điền đầy đủ thông tin" });
-    }
-
+/**
+ * ✅ API: Lấy danh sách giáo viên
+ */
+router.get("/", async (req, res) => {
     try {
-        // ⚠️ Kiểm tra xem email hoặc số điện thoại đã tồn tại chưa
-        const existingGiaoVien = await GiaoVien.findOne({ $or: [{ email }, { phone }] });
-        if (existingGiaoVien) {
-            return res.status(400).json({ message: "Email hoặc số điện thoại đã tồn tại!" });
-        }
-
-        const giaovien = new GiaoVien({ full_name, subject, phone, email, photo });
-        await giaovien.save();
-        res.status(201).json({ message: "Thêm giáo viên thành công", data: giaovien });
+        const danhSachGiaoVien = await GiaoVien.find();
+        return res.status(200).json({
+            message: "Lấy danh sách giáo viên thành công",
+            data: danhSachGiaoVien
+        });
     } catch (error) {
-        res.status(500).json({ message: "Lỗi khi thêm giáo viên", error: error.message });
+        return res.status(500).json({
+            message: "Lỗi khi lấy danh sách giáo viên",
+            error: error.message
+        });
     }
 });
 
-// ✅ Cập nhật thông tin giáo viên (Chỉ Admin)
-router.put("/:id", verifyToken, authorize(["admin"]), async (req, res) => {
+/**
+ * ✅ API: Lấy thông tin giáo viên theo ID
+ */
+router.get("/:id", async (req, res) => {
     const { id } = req.params;
 
     if (!mongoose.Types.ObjectId.isValid(id)) {
@@ -36,39 +33,123 @@ router.put("/:id", verifyToken, authorize(["admin"]), async (req, res) => {
     }
 
     try {
-        const { full_name, subject, phone, email, photo } = req.body;
-        const giaovien = await GiaoVien.findByIdAndUpdate(id, { full_name, subject, phone, email, photo }, { new: true });
+        const giaovien = await GiaoVien.findById(id);
+        if (!giaovien) {
+            return res.status(404).json({ message: "Không tìm thấy giáo viên" });
+        }
+        return res.status(200).json({
+            message: "Lấy thông tin giáo viên thành công",
+            data: giaovien
+        });
+    } catch (error) {
+        return res.status(500).json({
+            message: "Lỗi khi lấy giáo viên",
+            error: error.message
+        });
+    }
+});
 
+/**
+ * ✅ API: Thêm giáo viên
+ */
+router.post("/", async (req, res) => {
+    try {
+        const { full_name, class: teacherClass, phone, email, photo } = req.body;
+
+        if (!full_name || !teacherClass || !phone || !email) {
+            return res.status(400).json({ message: "Vui lòng điền đầy đủ thông tin" });
+        }
+
+        const existingGiaoVien = await GiaoVien.findOne({ $or: [{ email }, { phone }] });
+        if (existingGiaoVien) {
+            return res.status(409).json({ message: "Email hoặc số điện thoại đã tồn tại!" });
+        }
+
+        const giaovien = new GiaoVien({
+            full_name,
+            class: teacherClass,
+            phone,
+            email,
+            photo: photo || ""
+        });
+
+        await giaovien.save();
+        return res.status(201).json({
+            message: "Thêm giáo viên thành công",
+            data: giaovien
+        });
+    } catch (error) {
+        return res.status(500).json({
+            message: "Lỗi khi thêm giáo viên",
+            error: error.message
+        });
+    }
+});
+
+/**
+ * ✅ API: Cập nhật thông tin giáo viên (Không yêu cầu xác thực)
+ */
+router.put("/:id", async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { full_name, class: teacherClass, phone, email, photo } = req.body;
+
+        if (!mongoose.Types.ObjectId.isValid(id)) {
+            return res.status(400).json({ message: "ID không hợp lệ" });
+        }
+
+        const giaovien = await GiaoVien.findById(id);
         if (!giaovien) {
             return res.status(404).json({ message: "Không tìm thấy giáo viên" });
         }
 
-        res.json({ message: "Cập nhật thành công", data: giaovien });
+        // Cập nhật thông tin
+        giaovien.full_name = full_name || giaovien.full_name;
+        giaovien.class = teacherClass || giaovien.class;
+        giaovien.phone = phone || giaovien.phone;
+        giaovien.email = email || giaovien.email;
+        giaovien.photo = photo || giaovien.photo;
+
+        await giaovien.save();
+        return res.status(200).json({
+            message: "Cập nhật thành công",
+            data: giaovien
+        });
     } catch (error) {
-        res.status(500).json({ message: "Lỗi khi cập nhật giáo viên", error: error.message });
+        return res.status(500).json({
+            message: "Lỗi khi cập nhật giáo viên",
+            error: error.message
+        });
     }
 });
 
-// ✅ Xóa giáo viên (Chỉ Admin)
-router.delete("/:id", verifyToken, authorize(["admin"]), async (req, res) => {
-    const { id } = req.params;
-
-    if (!mongoose.Types.ObjectId.isValid(id)) {
-        return res.status(400).json({ message: "ID không hợp lệ" });
-    }
-
+/**
+ * ✅ API: Xóa giáo viên (Không yêu cầu xác thực)
+ */
+router.delete("/:id", async (req, res) => {
     try {
+        const { id } = req.params;
+
+        if (!mongoose.Types.ObjectId.isValid(id)) {
+            return res.status(400).json({ message: "ID không hợp lệ" });
+        }
+
         const giaovien = await GiaoVien.findByIdAndDelete(id);
 
         if (!giaovien) {
             return res.status(404).json({ message: "Không tìm thấy giáo viên" });
         }
 
-        res.json({ message: "Xóa giáo viên thành công", data: giaovien });
+        return res.status(200).json({
+            message: "Xóa giáo viên thành công",
+            data: giaovien
+        });
     } catch (error) {
-        res.status(500).json({ message: "Lỗi khi xóa giáo viên", error: error.message });
+        return res.status(500).json({
+            message: "Lỗi khi xóa giáo viên",
+            error: error.message
+        });
     }
 });
 
 module.exports = router;
-        

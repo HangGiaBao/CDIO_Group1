@@ -29,7 +29,7 @@ const Notification = () => {
             </div>
             <div>
                 <h2>Admin Page</h2>
-                <p>Đây là trang quản trị</p>
+                <p>Đây là trang </p>
                 
             </div>
             </div>

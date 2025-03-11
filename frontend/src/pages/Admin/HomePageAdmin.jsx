@@ -2,7 +2,7 @@ import React from 'react'
 import "./HomePageAdmin.scss"
 import Menu from '../../components/Admin/MenuAdmin/Menu'
 import AdminHeader from '../../components/Admin/HeaderAdmin/AdminHeader'
-import { Link, Outlet } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 
 const HomePageAdmin = () => {
   return (
@@ -17,7 +17,8 @@ const HomePageAdmin = () => {
         <div>
           <Outlet />
         </div>  
-      </div>     
+      </div>    
+      
     </div>
   )
 }

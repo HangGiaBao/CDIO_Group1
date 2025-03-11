@@ -32,7 +32,7 @@ const ThongTinCuaBe = () => {
             <ul>
                 {classes.map((cls) => (
                     <li key={cls._id}>
-                        <Link to={`/user/classdetail/${cls._id}`}>{cls.name}</Link>
+                        <Link to={`/teacher/classdetail/${cls._id}`}>{cls.name}</Link>
                     </li>
                 ))}
             </ul>

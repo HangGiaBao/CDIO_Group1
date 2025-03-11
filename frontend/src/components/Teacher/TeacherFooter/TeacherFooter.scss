@@ -1,0 +1,62 @@
+/* Đảm bảo body và html chiếm toàn bộ chiều cao */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1; /* Đảm bảo container chiếm toàn bộ không gian còn lại */
+}
+
+/* Footer sẽ luôn ở dưới cùng */
+.user-footer {
+  margin-top: 30px;
+  background: linear-gradient(to right, #9bcaf3, #ff7eb3);
+  padding: 20px 0;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  bottom: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text {
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
+
+.links {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+
+  .button {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+
+    &:hover {
+      background: white;
+      color: #ff758c;
+      transform: translateY(-2px);
+    }
+  }
+}

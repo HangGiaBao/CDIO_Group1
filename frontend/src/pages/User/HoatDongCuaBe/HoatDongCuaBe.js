@@ -1,63 +1,38 @@
 import React from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import ST from '../../../assets/images/ST.jpg';
 import BT from '../../../assets/images/BT.jpg';
 import BTT from '../../../assets/images/BTT.jpg';
 import HeaderContent from '../../../components/Admin/HeaderContent/HeaderContent';
 import './HoatDongCuaBe.scss';
 
-const HoatDongCuaBe = () => {
-    const [modalAdd, setModalAdd] = React.useState(false);
-    const [active, setActive] = React.useState(false);
-    const [toggle, setToggle] = React.useState(false);
-    const navigate = useNavigate();
-    const location = useLocation();
-    const lastSegment = location.pathname.split("/").filter(Boolean).pop();
-    
-    const toggleModal1 = () => {
-        setActive(false);
-        setToggle(false);
-        setModalAdd(false);
-    };
+const activities = [
+    { id: 1, name: "Tham Quan Sở Thú", description: "Chuyến tham quan Sở Thú giúp bé khám phá động vật và thiên nhiên.", image: ST },
+    { id: 2, name: "Tham Quan Vườn Bách Thảo", description: "Trải nghiệm thiên nhiên qua chuyến đi tham quan Vườn Bách Thảo.", image: BT },
+    { id: 3, name: "Tham Quan Bảo Tàng", description: "Khám phá lịch sử và văn hóa qua chuyến tham quan Bảo Tàng.", image: BTT },
+];
 
-    const hanldeNhay1 = () => {
-        navigate("/HoatDongCuaBe");
-    };
+const HoatDongCuaBe = () => {
+    const navigate = useNavigate();
 
     return (
-        <div>
+        <div className="hoat-dong">
             <HeaderContent nameNavigate={"Hoạt Động Của Bé"} />
-            <div className="HoatDong">
-                <div className="HoatDong-item">
-                    <div className="HoatDong-image">
-                        <img src={ST} alt="Tham Quan Sở Thú" />
+            <div className="hoat-dong-list">
+                {activities.map((activity) => (
+                    <div key={activity.id} className="hoat-dong-item">
+                        <div className="hoat-dong-image">
+                            <img src={activity.image} alt={activity.name} />
+                        </div>
+                        <div className="hoat-dong-content">
+                            <h2>{activity.name}</h2>
+                            <p>{activity.description}</p>
+                        </div>
                     </div>
-                    <div className="HoatDong-content">
-                        <h2>Tham Quan Sở Thú</h2>
-                        <p>Chuyến tham quan Sở Thú dành cho các bé mầm non, giúp bé khám phá động vật và thiên nhiên.</p>
-                    </div>
-                </div>
-                <div className="HoatDong-item">
-                    <div className="HoatDong-image">
-                        <img src={BT} alt="Tham Quan Vườn Bách Thảo" />
-                    </div>
-                    <div className="HoatDong-content">
-                        <h2>Tham Quan Vườn Bách Thảo</h2>
-                        <p>Trải nghiệm thiên nhiên qua chuyến đi tham quan Vườn Bách Thảo, học hỏi về các loài cây và hoa.</p>
-                    </div>
-                </div>
-                <div className="HoatDong-item">
-                    <div className="HoatDong-image">
-                        <img src={BTT} alt="Tham Quan Bảo Tàng" />
-                    </div>
-                    <div className="HoatDong-content">
-                        <h2>Tham Quan Bảo Tàng</h2>
-                        <p>Khám phá lịch sử và văn hóa qua chuyến tham quan Bảo Tàng, giúp bé mở rộng kiến thức.</p>
-                    </div>
-                </div>
+                ))}
             </div>
         </div>
     );
 };
-export default HoatDongCuaBe;
 
+export default HoatDongCuaBe;

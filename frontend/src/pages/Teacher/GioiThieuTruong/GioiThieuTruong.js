@@ -59,7 +59,7 @@ const GioiThieuTruong = () => {
         DÀNH CHO TRẺ MẦM NON ĐƯỢC GIẢNG DẠY TỪ NĂM HỌC 2019-2020
       </p>
       <h2 className="section-title">GIỚI THIỆU VỀ TRƯỜNG</h2>
-      <p className="section-text">
+      <p className="section-text1">
     Trường Mầm non Little Angel là một môi trường giáo dục lý tưởng dành cho các bé từ 2 đến 6 tuổi, 
     nơi các em không chỉ được học mà còn được khám phá, phát triển và trưởng thành trong một không gian tràn đầy yêu thương, 
     sáng tạo và đam mê học hỏi. Với phương châm "Học mà chơi, chơi mà học", 

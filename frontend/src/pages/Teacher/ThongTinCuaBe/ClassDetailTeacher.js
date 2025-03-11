@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import styles from "./ClassDetailUser.module.scss";
+import styles from "./ClassDetailTeacher.module.scss";
 
 const ClassDetailUser = () => {
     const { id } = useParams();

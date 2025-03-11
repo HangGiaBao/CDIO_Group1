@@ -52,7 +52,7 @@ const Menu = () => {
                 </div>
                 {openMenu === "thongtinchung" && (
                     <>
-                        <div className="subItem" onClick={() => handleNavigate("/teacher/ThongTinGiaoVienChuNhiem1")}>Thông tin giáo viên</div>
+                        <div className="subItem" onClick={() => handleNavigate("/teacher/teachers1")}>Thông tin giáo viên</div>
                         <div className="subItem" onClick={() => handleNavigate("/teacher/ThongTinCuaBe1")}>Danh sách lớp</div>
                     </>
                 )}
@@ -63,7 +63,7 @@ const Menu = () => {
                 {openMenu === "lichhoc" && (
                     <>
                         {/* Thêm id nếu có classid */}
-                        <div className="subItem" onClick={() => handleNavigate(`/teacher/ThoiKhoaBieu1/${classid}`)}>Lịch dạy</div>
+                        <div className="subItem" onClick={() => handleNavigate(`/teacher/schedulelist`)}>Lịch dạy</div>
                         <div className="subItem" onClick={() => handleNavigate("/teacher/ThucDon1")}>Thực đơn</div>
                     </>
                 )}

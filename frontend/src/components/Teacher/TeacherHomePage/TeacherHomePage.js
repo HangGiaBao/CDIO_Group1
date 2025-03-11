@@ -3,22 +3,25 @@ import UserHeader from '../TeacherHeader/TeacherHeader'
 import Menu from '../MenuTeacher/Menu'
 import UserDetail from '../TeacherDetail/TeacherDetail'
 import './TeacherHomePage.scss'  
-const UserHomePage = () =>{
+import TeacherFooter from '../TeacherFooter/TeacherFooter'
+
+const UserHomePage = () => {
   return (
     <div className='teacherHomePage'>
-      
-        <div className='teacherHeader'>
-          <UserHeader/>
-        </div>
-        <div className='teacherContent'>
+      <div className='teacherHeader'>
+        <UserHeader />
+      </div>
+      <div className='teacherContent'>
         <div className='teacherMenu'>
           <Menu />
         </div>
         <div className='teacherDetail'>
           <UserDetail />
-        </div>  
-          </div>
-          
+        </div>
+      </div>
+      <div className='teacherFooter'>
+        <TeacherFooter />
+      </div> 
     </div>
   )
 }
